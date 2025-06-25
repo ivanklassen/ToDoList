@@ -1,0 +1,11 @@
+rules:
+  - id: empty-catch
+    message: Empty catch block may hide errors. Add logging or handling.
+    severity: WARNING
+    languages: [csharp, python, javascript]
+    pattern: |
+      try {
+        ...
+      } catch {
+        ...
+      }
