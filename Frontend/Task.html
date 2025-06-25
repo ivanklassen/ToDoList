@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ToDoList.css">
+    <link rel="stylesheet" href="Task.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="task_info">
+            <img src="./img/strelka.png" class="close_info">
+
+
+            <div class="title_info">Task1</div>
+
+            <div class="description_info">Описание не добавлено</div>
+
+            <div class="deadline_info">
+                <div class="deadline-title titles">Срок выполнения:</div>
+                <div id="d_value" class="deadline-value values">Срок не задан</div>
+            </div>
+
+            <div class="status_info">
+                <div class="status-title titles">Статус:</div>
+                <div id="s_value" class="status-value values">Active</div>
+            </div>
+
+            <div class="priority_info">
+                <div class="priority-title titles">Приоритет:</div>
+                <div id="p_value" class="priority-value values"></div>
+            </div>
+
+            <div class="creatingDate_info">
+                <div class="create-title titles">Дата создания:</div>
+                <div id="dc_value" class="create-value values"></div>
+            </div>
+
+            <div class="editingDate_info">
+                <div class="edit-title titles">Дата редактирования:</div>
+                <div id="de_value" class="edit-value values">Задача не редактировалась</div>
+            </div>
+
+
+        </div>
+    </div>
+    
+    <script src="Task.js"></script>
+</body>
+</html>
