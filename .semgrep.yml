@@ -1,0 +1,28 @@
+rules:
+  - id: hardcoded-secret
+    message: Found hardcoded secret
+    languages: [csharp]
+    severity: ERROR
+    patterns:
+      - pattern-inside: |
+          string $VAR = "$SECRET";
+      - metavariable-regex:
+          metavariable: $SECRET
+          regex: (password|token|api[_-]?key|secret|test_)[0-9a-zA-Z_-]{5,}
+
+  - id: sql-injection
+    message: Potential SQL injection
+    languages: [csharp]
+    severity: CRITICAL
+    patterns:
+      - pattern: |
+          "..." + $USER_INPUT + "..."
+      - pattern-not: |
+          SqlParameter(...)
+
+  - id: empty-catch
+    message: Empty catch block
+    languages: [csharp]
+    severity: WARNING
+    pattern: |
+      try { ... } catch (Exception) { ... }
