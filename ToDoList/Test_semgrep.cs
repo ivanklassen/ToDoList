@@ -15,7 +15,6 @@
             var query = "SELECT * FROM Users WHERE Name = '" + userName + "'";
 
 
-
             try
             {
                 SomeRiskyOperation();
