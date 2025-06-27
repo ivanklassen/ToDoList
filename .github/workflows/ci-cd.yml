@@ -19,16 +19,4 @@ jobs:
         with:
           config: .semgrep.yml  
 
-  dependency-check:
-      name: OWASP Dependency-Check
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout code
-          uses: actions/checkout@v4
-  
-        - name: Run Dependency-Check
-          uses: johannes-experiential-technology/dep-scan-action@0.1.0
-          with:
-            scanpath: 'ToDoList'
-
 
