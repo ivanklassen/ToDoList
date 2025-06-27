@@ -8,7 +8,7 @@
         }
         public void errors()
         {
-            string apiKey = "test_1234567890";
+            string apiKey = "test_1574849332674554558";
 
             string userName = "admin";
 
@@ -20,9 +20,7 @@
             {
                 SomeRiskyOperation();
             }
-            catch (Exception)  
-            {
-            }
+            catch (Exception)  {}
 
         }
 
