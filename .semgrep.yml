@@ -13,7 +13,7 @@ rules:
   - id: sql-injection
     message: Potential SQL injection
     languages: [csharp]
-    severity: CRITICAL
+    severity: ERROR
     patterns:
       - pattern: |
           "..." + $USER_INPUT + "..."
