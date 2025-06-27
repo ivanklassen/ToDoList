@@ -19,3 +19,23 @@ jobs:
         with:
           config: .semgrep.yml  
 
+  dependency-check:
+      name: OWASP Dependency-Check
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@v4
+  
+        - name: Set up Java
+          uses: actions/setup-java@v3
+          with:
+            java-version: '11'
+            distribution: 'temurin'
+  
+        - name: Run Dependency-Check
+          uses: OWASP/dependency-check-action@v3
+          with:
+            project: 'ToDoList'
+            scanpath: 'ToDoList'
+
+
