@@ -1,4 +1,4 @@
-name: Analysis Code
+name: Analysis
 
 on:
   push:
@@ -17,7 +17,5 @@ jobs:
       - name: Run Semgrep
         uses: returntocorp/semgrep-action@v1
         with:
-         
           config: .semgrep.yml  
-          output-format: "sarif"
-          output-file: "semgrep-results.sarif"
+
